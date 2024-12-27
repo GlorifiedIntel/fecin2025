@@ -9,9 +9,14 @@ const Footer = () => {
         {/* You can add a logo image here if needed */}
         <h2>FECIN</h2>
       </div>
-      <div className={styles.text}>
-        <p>FECIN © 2025 All rights reserved.</p>
-        <p>Designed and Develop by: Kevin Cross Minchakpu</p>
+      <div>
+        <p className={styles.text}>FECIN © 2025 All rights reserved.</p>
+        <p className={styles.author}>
+          <a href="https://www.linkedin.com/in/kevin-cross-minchakpu-7897379a" target="_blank">Designed and Develop By: Kevin Cross Minchakpu</a>
+          </p>
+        <p className={styles.company}>
+          <a href="https://octatesystems.github.io/OSNigeria/">Powered By: Octate Systems</a>
+          </p>
       </div>
       <div className={styles.links}>
         <a href="/terms" className={styles.link}>Terms of Use</a>
