@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'; 
-import Link from 'next/link'; // Import Link for navigation
+import Link from 'next/link'; 
 import styles from './about.module.css';
 
 const AboutPage = () => {
@@ -35,7 +35,7 @@ const AboutPage = () => {
       
       {/* Features Section */}
       <div className={styles.featuresContainer}>
-        <h2 className={styles.featuresTitle}>Our Features</h2>
+        <h2 className={styles.featuresTitle}>What We Do</h2>
         <div className={styles.featuresList}>
           <div className={styles.featureCard}>
             <h3 className={styles.featureTitle}>Bible Translation</h3>
@@ -56,8 +56,31 @@ const AboutPage = () => {
             <p className={styles.featureDesc}>
               Our mission helps the Eggon people grow spiritually by providing them with scriptures in their heart language.
             </p>
-            <Link href="../spiritual-growth" className={styles.learnMoreButton}>Learn More</Link>
+            <Link href="/spiritual-growth" className={styles.learnMoreButton}>Learn More</Link>
+
           </div>
+        </div>
+      </div>
+
+      {/* Leadership Section */}
+      <div className={styles.leadershipSection}>
+        <h2 className={styles.leadershipTitle}>Our Leadership</h2>
+        <div className={styles.leadershipGrid}>
+          {/* Leader Cards */}
+          {[
+            { name: 'John Doe', position: 'President', image: '/team-1.jpg' },
+            { name: 'Jane Smith', position: 'Vice President', image: '/team-2.jpg' },
+            { name: 'Michael Johnson', position: 'Secretary', image: '/team-3.jpg' },
+            { name: 'Emily Davis', position: 'Treasurer', image: '/team-1.jpg' },
+            { name: 'Chris Wilson', position: 'Director of Programs', image: '/team-2.jpg' },
+            { name: 'Sophia Brown', position: 'Community Liaison', image: '/team-3.jpg' },
+          ].map((leader, index) => (
+            <div key={index} className={styles.leaderCard}>
+              <Image src={leader.image} alt={leader.name} width={150} height={150} className={styles.leaderImage} />
+              <h3 className={styles.leaderName}>{leader.name}</h3>
+              <p className={styles.leaderPosition}>{leader.position}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -65,3 +88,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
