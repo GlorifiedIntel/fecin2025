@@ -56,7 +56,7 @@ const AboutPage = () => {
             <p className={styles.featureDesc}>
               Our mission helps the Eggon people grow spiritually by providing them with scriptures in their heart language.
             </p>
-            <Link href="/spiritual-growth" className={styles.learnMoreButton}>Learn More</Link>
+            <Link href="../spiritual-growth" className={styles.learnMoreButton}>Learn More</Link>
           </div>
         </div>
       </div>
