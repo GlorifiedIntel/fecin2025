@@ -3,7 +3,7 @@
     --text: white;
     --bgSoft: #091f2c;
     --textSoft: rgb(237, 232, 232);
-    --btn: #560319;
+    --btn: #de3c21;
     --bgWhite: white;
     --textGray: #444444;
 }
@@ -27,13 +27,45 @@ a {
 }
 
 .container {
-    background-color: var(--bg);
-    width: 100%;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: var(--bg);
+  width: 100%; /* Default for small screens */
+  max-width: 980px; /* Restricts container width */
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 1536px) {
+.container {
+  max-width: 1366px;
+}
+}
+
+@media only screen and (min-width: 1336px) {
+.container {
+  max-width: 1280px;
+}
+}
+
+@media only screen and (min-width: 1280px) {
+.container {
+  max-width: 1024px;
+  
+}
+}
+
+@media only screen and (min-width: 1024px) {
+.container {
+  max-width: 768px;
+}
+}
+
+@media only screen and (min-width: 768px) {
+.container {
+  max-width: 640px;
+}
 }
