@@ -175,3 +175,9 @@
   font-size: .7rem;
   color: #666;
 }
+
+@media (min-width: 480px) {
+  .Container {
+    flex-direction: column;
+  }
+}

@@ -45,3 +45,9 @@
   .form button:hover {
     background-color: #046a81;
   }
+
+  @media (min-width: 480px) {
+    .Container {
+      flex-direction: column;
+    }
+  }
