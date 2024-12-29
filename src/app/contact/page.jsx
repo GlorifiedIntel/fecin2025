@@ -1,9 +1,14 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';  
 import styles from './contact.module.css';  
 
 const ContactPage = () => {
-  return (
+
+  const a = Math.random()
+  console.log(a)
+ return (
     <div className={styles.container}>
       {/* Image Section */}
       <div className={styles.imgContainer}>
@@ -24,7 +29,7 @@ const ContactPage = () => {
             placeholder="Message"
             className={styles.textarea}
           ></textarea>
-          <button className={styles.button}>Send</button>
+          <button className={styles.button} onClick={() => console.log("clicked")}>Send</button>
         </form>
       </div>
     </div>
